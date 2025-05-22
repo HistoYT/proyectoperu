@@ -15,16 +15,5 @@ window.addEventListener('DOMContentLoaded', function() {
             header.classList.remove('scrolled');
         }
 
-        // Animación de salida/entrada según dirección del scroll
-        if(window.scrollY > lastScroll && window.scrollY > 100) {
-            // Bajando: ocultar header
-            header.classList.remove('header-visible');
-            header.classList.add('header-hidden');
-        } else {
-            // Subiendo: mostrar header
-            header.classList.remove('header-hidden');
-            header.classList.add('header-visible');
-        }
-        lastScroll = window.scrollY;
     });
 });

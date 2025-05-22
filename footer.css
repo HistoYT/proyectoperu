@@ -1,0 +1,36 @@
+footer {
+    background: #4a3728;
+    color: #f8f6f0;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Georgia', serif;
+}
+
+footer .socios {
+    margin-top: 16px;
+}
+
+footer .socios span {
+    font-weight: bold;
+    margin-right: 8px;
+    color: #c9a76c;
+}
+
+footer .socios ul {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0;
+    display: inline-flex;
+    gap: 16px;
+}
+
+footer .socios li {
+    color: #d9b76a;
+}
+
+@media (max-width: 500px) {
+    footer .socios ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

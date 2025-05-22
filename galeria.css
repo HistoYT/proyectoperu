@@ -1,0 +1,114 @@
+/* ==== Sección Galería ==== */
+#galeria {
+    background: linear-gradient(135deg, #e8d5ac 20%, #a0783c 100%);
+    padding: 60px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+#galeria h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2.2rem;
+    color: #4a3728;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ==== Contenedor de fotos ==== */
+#galeria .galeria-fotos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+/* ==== Tarjetas ==== */
+.galeria-fotos figure {
+    --delay: 0.1s;
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    background: #fff8e6;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeUp 0.6s ease forwards;
+    max-width: 560px;    /* Reduce el ancho máximo de cada tarjeta */
+}
+.galeria-fotos figure:nth-child(1) { animation-delay: calc(var(--delay)*1); }
+.galeria-fotos figure:nth-child(2) { animation-delay: calc(var(--delay)*2); }
+.galeria-fotos figure:nth-child(3) { animation-delay: calc(var(--delay)*3); }
+.galeria-fotos figure:nth-child(4) { animation-delay: calc(var(--delay)*4); }
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ==== Hover inmersivo ==== */
+.galeria-fotos figure:hover {
+    transform: perspective(600px) rotateY(6deg) rotateX(3deg) scale(1.05);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+.galeria-fotos figure:hover img {
+    filter: brightness(1.1) contrast(1.1) sepia(0.1);
+}
+.galeria-fotos img {
+    width: 100%;
+    display: block;
+    border-radius: 8px 8px 0 0;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.galeria-fotos img:hover {
+    transform: scale(1.08);
+}
+
+/* ==== Titre emergente ==== */
+.galeria-fotos figcaption {
+    margin: 12px;
+    font-size: 0.95rem;
+    color: #4a3728;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.galeria-fotos figure:hover figcaption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==== Testimonio ==== */
+#galeria blockquote {
+    max-width: 800px;
+    margin: 40px auto 0;
+    padding: 16px 24px;
+    font-style: italic;
+    color: #4a3728;
+    background: rgba(255,255,255,0.2);
+    border-left: 4px solid #a0783c;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* ==== Responsive ==== */
+@media(max-width: 768px) {
+    #galeria {
+        padding: 40px 12px;
+    }
+    #galeria h2 {
+        font-size: 1.8rem;
+    }
+    .galeria-fotos {
+        gap: 16px;
+    }
+    .galeria-fotos figure {
+        max-width: 45%;
+    }
+}
