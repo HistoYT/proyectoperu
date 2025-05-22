@@ -1,0 +1,82 @@
+#alojamiento {
+    background: linear-gradient(120deg, #f4ecd3 20%, #bfa566 100%);
+    color: #2b2512;
+    padding: 60px 0 40px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+#alojamiento h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 32px;
+    color: #2b2512;
+    font-family: 'Georgia', serif;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+.alojamientos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hotel {
+    background: rgba(255, 248, 230, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    flex: 1 1 250px;
+    margin-bottom: 16px;
+    padding: 16px;
+    text-align: center;
+    color: #2b2512;
+}
+
+.hotel img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.hotel p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Imagen vertical lateral */
+.imagen-lateral {
+    float: right; /* o left, según prefieras */
+    margin: 0 0 16px 16px;
+    width: 300px; /* Ajusta el ancho deseado */
+    max-height: 500px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+.imagen-lateral img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .imagen-lateral {
+        float: none;
+        margin: 0 auto 16px;
+        display: block;
+    }
+    .hotel {
+        flex: 1 1 100%;
+    }
+}

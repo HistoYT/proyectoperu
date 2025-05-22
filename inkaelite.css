@@ -1,0 +1,42 @@
+#nosotros {
+    background: linear-gradient(120deg, #c9b37e 40%, #4a3728 90%);
+    color: #f8f6f0;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 0 0 28px 28px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+
+#nosotros h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    margin-bottom: 24px;
+    color: #f8f6f0;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+
+#nosotros p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    background: rgba(255, 253, 245, 0.07);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.1);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    #nosotros {
+        padding: 40px 10px;
+    }
+    #nosotros h2 {
+        font-size: 1.6rem;
+    }
+    #nosotros p {
+        font-size: 1rem;
+        padding: 16px;
+    }
+}

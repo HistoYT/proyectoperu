@@ -1,0 +1,105 @@
+#gastronomia {
+    position: relative;
+    background-image: url("https://www.shutterstock.com/image-photo/peruvian-ceviche-traditional-food-260nw-2090292532.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fcefd3;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    border-radius: 0 0 28px 28px;
+    overflow: hidden;
+}
+
+/* Overlay oscuro suave */
+#gastronomia::after {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(40, 40, 40, 0.55);
+    pointer-events: none;
+    z-index: 0;
+}
+
+#gastronomia h2,
+#gastronomia p,
+.galeria-gastronomia {
+    position: relative;
+    z-index: 1; /* Frente al overlay */
+}
+
+/* Animación de desvanecimiento al cambiar de fondo */
+.fading-bg {
+    animation: fadeBg 1.2s ease forwards;
+}
+
+@keyframes fadeBg {
+    0% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#gastronomia h2 {
+    font-size: 2.4rem;
+    margin-bottom: 32px;
+    color: #fcefd3;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    font-family: 'Georgia', serif;
+}
+
+/* Texto sobre fondo */
+#gastronomia p {
+    max-width: 800px;
+    margin: 0 auto 28px auto;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    background: rgba(255,255,255,0.07);
+    color: #fcefd3;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+
+/* Galería de fotos */
+.galeria-gastronomia {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.galeria-gastronomia img {
+    width: 260px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria-gastronomia img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    #gastronomia h2 {
+        font-size: 1.8rem;
+    }
+    #gastronomia p {
+        font-size: 1rem;
+        margin-bottom: 18px;
+    }
+    .galeria-gastronomia img {
+        width: 100%;
+        max-width: 280px;
+    }
+}
